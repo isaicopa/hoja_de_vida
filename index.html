@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <!-- Referencia al archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <!-- Botón Modo Oscuro -->
+        <div class="theme-toggle-container">
+            <button id="theme-toggle" class="btn btn-sm" aria-label="Cambiar tema">
+                Modo Oscuro
+            </button>
+        </div>
+
+        <!-- 1. ENCABEZADO / HERO -->
+        <header class="hero">
+            <h1>Obed Isaí Copa Apaza</h1>
+            <h2>Full-Stack Developer</h2>
+            <p>"Especializado en arquitectura web, automatización e infraestructura."</p>
+            <div class="hero-buttons">
+                <a href="#proyectos" class="btn">Ver Proyectos</a>
+                <a href="#contacto" class="btn">Contactar</a>
+            </div>
+        </header>
+
+        <!-- 2. SOBRE MÍ & HABILIDADES CLAVE -->
+
+
+        <section class="section-divider">
+            <div class="about-grid">
+                <!-- Contenedor con avatar e iniciales al hacer hover -->
+                <div class="profile-avatar">
+                    <img src="img/perfil.jpeg" alt="Obed Copa">
+                    <div class="avatar-overlay">OC</div>
+                </div>
+            
+                <!-- Bloque Sobre Mí -->
+                <div class="wireframe-box about-box">
+                    <h3>Sobre Mí</h3>
+                    <p>Desarrollador enfocado en construir soluciones robustas, escalables e integraciones eficientes.</p>
+                </div>
+            </div>
+
+            <!-- Habilidades Clave -->
+            <div class="wireframe-box skills-box" style="margin-top: 1.5rem;">
+                <h3>Habilidades Clave</h3>
+                <div class="skills-list">
+                    <span class="skill-tag">(Python/Django)</span>
+                    <span class="skill-tag">(PHP/Laravel)</span>
+                    <span class="skill-tag">(Angular)</span>
+                    <span class="skill-tag">(Docker)</span>
+                    <span class="skill-tag">(Linux/Admin)</span>
+                    <span class="skill-tag">(Git)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN PROYECTOS -->
+        <section id="proyectos" class="section-divider">
+            <h2 class="section-title">Proyectos</h2>
+
+            <!-- Controles de Búsqueda y Navegación del Carrusel -->
+            <div class="projects-controls">
+                <input type="text" id="project-search" class="form-control" placeholder="Buscar proyecto por título o tecnología...">
+                <div class="carousel-nav">
+                    <button id="prev-btn" class="btn btn-sm" aria-label="Proyecto anterior">← Anterior</button>
+                    <span id="carousel-counter" class="carousel-counter">1 de 9</span>
+                    <button id="next-btn" class="btn btn-sm" aria-label="Proyecto siguiente">Siguiente →</button>
+                </div>
+            </div>
+
+            <!-- Contenedor del Carrusel -->
+            <div class="carousel-wrapper">
+                <div class="projects-carousel" id="projects-carousel">
+                    
+                    <!-- Proyecto 1 -->
+                    <article class="project-card" data-title="e-commerce tienda virtual python django shopping" data-index="1">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce</h3>
+                            <p>Plataforma de comercio electrónico completa con pasarela de pagos e inventario.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 2 -->
+                    <article class="project-card" data-title="app de reservas cita calendario laravel php" data-index="2">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>App de Reservas</h3>
+                            <p>Sistema de gestión de citas y reservas en tiempo real con notificaciones.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 3 -->
+                    <article class="project-card" data-title="dashboard de administración angular panel admin analytics" data-index="3">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Dashboard de Administración</h3>
+                            <p>Panel interactivo para monitoreo de métricas, usuarios y reportes exportables.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 4 -->
+                    <article class="project-card" data-title="control de personal asistencia rrhh docker linux" data-index="4">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Control de Personal</h3>
+                            <p>Módulo de registro de asistencias, permisos y horarios laborales.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 5 -->
+                    <article class="project-card" data-title="api gateway microservicios docker python fastapi" data-index="5">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>API Gateway Microservicios</h3>
+                            <p>Enrutador centralizado con autenticación JWT y limitación de tasa (rate-limiting).</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 6 -->
+                    <article class="project-card" data-title="sistema de inventarios php laravel mysql" data-index="6">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Sistema de Inventarios</h3>
+                            <p>Gestión de entradas/salidas de almacén con lectura de códigos de barras.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 7 -->
+                    <article class="project-card" data-title="automatización de despliegues ci/cd docker gitlab bash" data-index="7">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Pipeline CI/CD Automatizado</h3>
+                            <p>Flujo de trabajo para pruebas automatizadas y despliegue continuo en servidores Linux.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 8 -->
+                    <article class="project-card" data-title="gestor de tareas colaborativo angular firebase" data-index="8">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Gestor de Tareas Kanban</h3>
+                            <p>Tablero tipo Trello para organización de proyectos y flujo de trabajo en equipo.</p>
+                        </div>
+                    </article>
+
+                    <!-- Proyecto 9 -->
+                    <article class="project-card" data-title="monitor de servidores infraestructura python linux cron" data-index="9">
+                        <div class="placeholder-x project-image-box">
+                            <div class="project-actions">
+                                <a href="#" class="btn btn-sm">GitHub</a>
+                                <a href="#" class="btn btn-sm">Demo</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>Monitor de Servidores</h3>
+                            <p>Script de supervisión en tiempo real con alertas vía Telegram/Email.</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+            
+            <!-- Mensaje cuando la búsqueda no devuelve resultados -->
+            <p id="no-projects-msg" class="no-results-msg" style="display: none;">No se encontraron proyectos que coincidan con la búsqueda.</p>
+        </section>
+
+        <!-- 4. TRAYECTORIA PROFESIONAL -->
+        <section class="section-divider">
+            <div class="trayectoria-header">
+                <h2 class="section-title" style="margin-bottom: 0; text-align: left;">Trayectoria profesional</h2>
+            </div>
+
+            <div class="wireframe-box table-responsive">
+                <table class="trayectoria-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Gestion</th>
+                            <th scope="col">Curso/Taller/Diplomado</th>
+                            <th scope="col">Universidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023 - Presente</td>
+                            <td>Diplomado en Arquitectura Cloud & DevOps</td>
+                            <td>Universidad Tecnológica</td>
+                        </tr>
+                        <tr>
+                            <td>2022</td>
+                            <td>Taller Avanzado de Django & Backend API</td>
+                            <td>Instituto Superior de Sistemas</td>
+                        </tr>
+                        <tr>
+                            <td>2021</td>
+                            <td>Curso Profesional de Angular</td>
+                            <td>Universidad Nacional</td>
+                        </tr>
+                        <tr>
+                            <td>2017 - 2021</td>
+                            <td>Ingeniería de Sistemas / Informática</td>
+                            <td>Universidad Autónoma Tomas Frías</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 5. CONTACTO & REDES -->
+        <section id="contacto" class="section-divider contact-section">
+            <div class="contact-header">
+                <h2>Contacto</h2>
+                <p>¿Tienes un proyecto en mente o consulta técnica?</p>
+            </div>
+
+            <form class="contact-form" action="#" method="POST">
+                <input type="text" class="form-control" placeholder="Nombre completo" required aria-label="Nombre">
+                <input type="email" class="form-control" placeholder="Ingrese un correo electronico valido" required aria-label="Correo electrónico">
+                <textarea class="form-control" placeholder="Ingrese su mensaje" required aria-label="Mensaje"></textarea>
+                <div>
+                    <button type="submit" class="btn">Enviar</button>
+                </div>
+            </form>
+
+            <footer class="footer-socials section-divider" style="padding-top: 1.5rem;">
+                <a href="#" class="btn">LinkedIn</a>
+                <a href="#" class="btn">Git</a>
+                <a href="#" class="btn">Correo</a>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Script Principal -->
+    <script src="main.js"></script>
+</body>
+</html>
